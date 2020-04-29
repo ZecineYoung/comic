@@ -28,9 +28,18 @@
 </template>
 
 <script>
+  export default{
+    // beforeCreate() {
+    //      document.querySelector('body').setAttribute('style', 'background:#eee')
+    // },
+    //  beforeDestroy() {
+    //   document.querySelector('body').removeAttribute('style')
+    // }
+    //单独设置本页面的背景色，另外style要加scoped
+  }
 </script>
 
-<style>
+<style scoped>
   .title{
     text-align: center;
     font-size: 28px;

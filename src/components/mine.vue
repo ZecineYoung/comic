@@ -2,7 +2,7 @@
   <div>
     <div class="mine">
       <div class="mine-pic"><img src="../../static/image/2.jpg"/></div>
-      <div class="mine-font">
+       <div class="mine-font">
         <p>欢 迎 登 录 动 漫 云</p>
         <p>Welcome to register Comic Cloud</p>
       </div>
@@ -20,20 +20,29 @@
 </template>
 
 <script>
- 
+  export default{
+    //全局设置背景色
+    
+  }
+
 </script>
 
-<style>
-  *{
+<style scoped>/*scoped 实现组件的私有化，不对全局造成样式污染*/
+  body{
     margin: 0;
     /* background-color: aliceblue; */
   }
   .mine{
     background-color: aliceblue;
   }
+
   .mine-pic img{
     width: 100%;
     background-size: 100% 100%;
+  }
+  .mine-font p{
+    margin-top:2px ;
+    margin-bottom: 2px;
   }
   .mine-font p:nth-child(1){
     font-size: 24px;

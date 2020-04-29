@@ -9,8 +9,39 @@
 
     <div class="home-content">
       <div class="home-title">⭐<span>动漫内容推荐</span>⭐</div>
-      <div>
-
+      <div class="home-class">
+          <div class="home-class-one">
+            <a href="#">
+              <div>
+                <img src="../../static/image/icon1.jpg"/>
+              </div>
+              <span>热血</span>
+             </a>
+            <a href="#">
+              <div>
+                <img src="../../static/image/icon1.jpg"/>
+              </div>
+              <span>浪漫</span>
+            </a>
+            <a href="#">
+              <div>
+                <img src="../../static/image/icon1.jpg"/>
+              </div>
+              <span>校园</span>
+            </a>
+            <a href="#">
+              <div>
+                <img src="../../static/image/icon1.jpg"/>
+              </div>
+              <span>推理</span>
+            </a>
+            <a href="#">
+              <div>
+                <img src="../../static/image/icon1.jpg"/>
+              </div>
+              <span>格斗</span>
+            </a>
+          </div>
       </div>
     </div>
   </div>
@@ -47,5 +78,42 @@
                   -1px 0 1px black,
                   0 1px 1px black,
                   0 -1px 1px black;
+  }
+  .home-class-one{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .home-class-one a{
+    width: 50px;
+    height:72px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    background-color: #F0F8FF;
+    border-radius: 6px;
+    box-shadow: 0px 0px 2px grey;
+    /* border: 1px solid lightyellow; */
+  }
+  .home-class-one a div{
+    /* position: relative; */
+    /* display: inline-block; */
+    width: 100%;
+    height:50px;
+    overflow: hidden;
+    border: 1px solid #FFFACD;
+    box-sizing: border-box;
+  }
+  .home-class-one a span{
+      text-align: center;
+      /* z-index: 1; */
+      font-family:"宋体";
+  }
+  .home-class-one a div img{
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid #FFFACD; */
+    border-radius: 5px;
   }
 </style>

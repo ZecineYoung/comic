@@ -40,6 +40,9 @@ export default {
       selected:"tab1",
     }
   },
+  mounted(){
+    document.body.style.backgroundColor="#eee";
+  },
   watch:{
           selected: function (val, oldVal) {
                   // 这里就可以通过 val 的值变更来确定
@@ -61,6 +64,9 @@ export default {
 </script>
 
 <style scoped>
+  body{
+    margin: 0;
+  }
 /* #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
