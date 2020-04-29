@@ -11,6 +11,38 @@
       <div class="home-title">⭐<span>动漫内容推荐</span>⭐</div>
       <div class="home-class">
           <div class="home-class-one">
+            <a href="#" v-for="content in item" :key="content.id">              
+              <div>
+                <img :src="content.image"/>
+              </div>
+              <span>{{content.name}}</span>
+             </a>
+            <!-- <a href="#">
+              <div>
+                <img src="../../static/image/icon1.jpg"/>
+              </div>
+              <span>浪漫</span>
+            </a>
+            <a href="#">
+              <div>
+                <img src="../../static/image/icon1.jpg"/>
+              </div>
+              <span>校园</span>
+            </a>
+            <a href="#">
+              <div>
+                <img src="../../static/image/icon1.jpg"/>
+              </div>
+              <span>推理</span>
+            </a>
+            <a href="#">
+              <div>
+                <img src="../../static/image/icon1.jpg"/>
+              </div>
+              <span>格斗</span>
+            </a>
+          </div>
+          <div class="home-class-one">
             <a href="#">
               <div>
                 <img src="../../static/image/icon1.jpg"/>
@@ -40,7 +72,7 @@
                 <img src="../../static/image/icon1.jpg"/>
               </div>
               <span>格斗</span>
-            </a>
+            </a> -->
           </div>
       </div>
     </div>
@@ -50,8 +82,15 @@
 <script>
   export default{
      data(){
-      return{
-
+      return{ 
+          item:[
+            {image:"../static/image/icon1.jpg",name:"热血",id:1},
+            {image:"../static/image/icon1.jpg",name:"爱情",id:2},
+            {image:"../static/image/icon1.jpg",name:"格斗",id:3},
+            {image:"../static/image/icon1.jpg",name:"推理",id:4},
+            {image:"../static/image/icon1.jpg",name:"校园",id:5},
+          ]
+        
       }
     }
   }
