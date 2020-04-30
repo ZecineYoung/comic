@@ -8,10 +8,19 @@
     </mt-swipe>
 
     <div class="home-content">
-      <div class="home-title">⭐<span>动漫内容推荐</span>⭐</div>
+      <div class="home-title">
+        <a v-on:click="switchPage"><img src="../../static/image/search.jpg" width="35px" height="35px"/></a>
+        <transition name="fade">
+           <span v-if="noSearch">⭐动漫内容推荐⭐</span>
+          <input type="text" placeholder="search" v-else/>
+        </transition>
+
+
+      </div>
+      <div style="clear: both;"></div>
       <div class="home-class">
           <div class="home-class-one">
-            <a href="#" v-for="content in item" :key="content.id">              
+            <a href="#" v-for="content in item" :key="content.id">
               <div>
                 <img :src="content.image"/>
               </div>
@@ -74,6 +83,14 @@
               <span>格斗</span>
             </a> -->
           </div>
+          <div class="home-class-one">
+            <a href="#" v-for="content1 in item1" :key="content1.id">
+              <div>
+                <img :src="content1.image"/>
+              </div>
+              <span>{{content1.name}}</span>
+             </a>
+          </div>
       </div>
     </div>
   </div>
@@ -82,15 +99,28 @@
 <script>
   export default{
      data(){
-      return{ 
+      return{
+          noSearch:true,
           item:[
             {image:"../static/image/icon1.jpg",name:"热血",id:1},
             {image:"../static/image/icon1.jpg",name:"爱情",id:2},
             {image:"../static/image/icon1.jpg",name:"格斗",id:3},
             {image:"../static/image/icon1.jpg",name:"推理",id:4},
-            {image:"../static/image/icon1.jpg",name:"校园",id:5},
-          ]
-        
+            {image:"../static/image/icon1.jpg",name:"校园",id:5}
+          ],
+          item1:[
+            {image:"../static/image/icon1.jpg",name:"热血1",id:1},
+            {image:"../static/image/icon1.jpg",name:"爱情1",id:2},
+            {image:"../static/image/icon1.jpg",name:"格斗1",id:3},
+            {image:"../static/image/icon1.jpg",name:"推理1",id:4},
+            {image:"../static/image/icon1.jpg",name:"校园1",id:5}
+          ],
+
+      }
+    },
+    methods:{
+      switchPage(){
+        this.noSearch = !this.noSearch
       }
     }
   }
@@ -98,6 +128,16 @@
 </script>
 
 <style>
+  .fade-enter-active {
+    transition: all .3s ease;
+  }
+  .fade-leave-active {
+    transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  }
+  .fade-enter, .slide-fade-leave-to{
+    transform: translateX(10px);
+    opacity: 0;
+  }
   .mint-swipe {
          height: 12.5rem;
           border-radius: 10px;
@@ -109,20 +149,35 @@
   .home-title{
     font-size: 24px;
     font-weight: 500;
+    padding: 5px;
     background-color: aliceblue;
+    /* border-bottom: 1px dotted #000000; */
   }
   .home-title span{
     color: white;
+    display: block;
     text-shadow: 1px 0 1px black,
                   -1px 0 1px black,
                   0 1px 1px black,
                   0 -1px 1px black;
+  }
+  .home-title a{
+    float: right;
+  }
+  .home-title input{
+    height: 22px;
+    width: 250px;
+    border-radius: 5px;
+    padding: 2px;
+    border: 2px solid darkgray;
   }
   .home-class-one{
     display: flex;
     justify-content: space-around;
     padding-top: 10px;
     padding-bottom: 10px;
+    border-bottom: 1px dotted #000000;
+    background-image: linear-gradient(darkgrey, lightgray,darkgrey);
   }
   .home-class-one a{
     width: 50px;
