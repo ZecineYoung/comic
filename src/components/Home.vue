@@ -92,6 +92,10 @@
              </a>
           </div>
       </div>
+      <div class="Home-hot">
+        <div class="Home-hot-one"><h3>11</h3></div>
+        <div class="Home-hot-two"><h3>11</h3></div>
+      </div>
     </div>
   </div>
 </template>
@@ -177,7 +181,7 @@
     padding-top: 10px;
     padding-bottom: 10px;
     border-bottom: 1px dotted #000000;
-    background-image: linear-gradient(darkgrey, lightgray,darkgrey);
+    /* background-image: linear-gradient(darkgrey, lightgray,darkgrey); */
   }
   .home-class-one a{
     width: 50px;
@@ -210,4 +214,18 @@
     /* border: 1px solid #FFFACD; */
     border-radius: 5px;
   }
+  .Home-hot{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+   }
+   .Home-hot div{
+     width: 100%;
+     background-color: #F0F8FF;
+     border-radius: 10px;
+
+   }
+   .Home-hot-one{
+
+   }
 </style>

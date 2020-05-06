@@ -5,6 +5,7 @@ import Home from '@/components/Home'
 import cartoon from '@/components/cartoon'
 import background from '@/components/background'
 import mine from '@/components/mine'
+import HomeContent from '@/components/HomeContent'
 
 Vue.use(Router)
 
@@ -18,7 +19,13 @@ export default new Router({
     {
       path: '/Home',
       name: 'Home',
-      component: Home
+      component: Home,
+      children:[
+        {
+          path:"HomeContent",
+          component:HomeContent
+        }
+      ]
     },
     {
       path: '/cartoon',
