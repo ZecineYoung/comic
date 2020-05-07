@@ -93,8 +93,20 @@
           </div>
       </div>
       <div class="Home-hot">
-        <div class="Home-hot-one"><h3>11</h3></div>
-        <div class="Home-hot-two"><h3>11</h3></div>
+        <div class="Home-hot-one">
+          <p>热门动漫 ></p>
+          <div>
+            <a><img src="../../static/image/2.jpg"/><span>火影</span></a>
+            <a><img src="../../static/image/2.jpg"/><span>柯南</span></a>
+          </div>
+        </div>
+        <div class="Home-hot-two">
+          <p>猜你喜欢 ></p>
+          <div>
+            <a><img src="../../static/image/2.jpg"/><span>海贼</span></a>
+            <a><img src="../../static/image/2.jpg"/><span>火影</span></a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -216,16 +228,58 @@
   }
   .Home-hot{
     display: flex;
+    /* align-items: flex-start; */
     width: 100%;
-    justify-content: space-around;
+    height: 98px;
+    /* justify-content: space-around; */
+    /* box-sizing: content-box; */
    }
    .Home-hot div{
      width: 100%;
      background-color: #F0F8FF;
-     border-radius: 10px;
-
+     /* border-radius: 10px; */
+     /* margin:0 10px; */
    }
    .Home-hot-one{
+     margin-left: 10px;
+     border-radius: 10px 0 0 10px;
+      border-right:1px solid lavenderblush;
+     box-sizing: border-box;
+     /* flex: 1; */
 
+   }
+   .Home-hot-one div{
+     display: flex;
+   }
+   .Home-hot-two div{
+     display: flex;
+   }
+   .Home-hot p{
+    font-weight: 500;
+    padding-left: 20px;
+    font-size: 15px;
+    margin: 10px 0;
+   }
+   .Home-hot-two{
+     /* flex: 1; */
+      /* height: 0; */
+     margin-right: 10px;
+     border-radius:0 10px 10px 0;
+   }
+   .Home-hot a{
+     display: inline-block;
+     width: 0;
+     flex: 1;
+     overflow: hidden;
+     display: flex;
+     flex-direction: column;
+   }
+   .Home-hot a span{
+     text-align: center;
+   }
+   .Home-hot img{
+      width: 50px;
+      margin:0 20px;
+      background-size:100% 100%;
    }
 </style>
